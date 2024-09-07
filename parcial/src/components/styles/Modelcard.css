@@ -1,0 +1,63 @@
+.model-card {
+    display: flex;
+    width: 1000px;
+    border: 2px solid rgb(52, 50, 50);
+    border-radius: 10px;
+    flex-direction: row;
+    height: 450px;
+    margin-bottom: 50px;
+    
+}
+
+.model-info {
+    display: flex;
+    width: 30%;
+    border: 2px solid rgb(52, 50, 50);
+    height: 100%;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.model-info img {
+    height: 65%;
+    width: 100%;
+}
+
+.model-info h1 {
+    color: black;
+    font-family: "Tinos", serif;
+    margin-left: 15px;
+}
+
+.model-info h3 {
+    margin-left: 15px;
+    color: gray;
+    font-family: "Tinos", serif;
+}
+
+/* Scrolling effect for model-photos */
+.model-photos {
+    display: flex;
+    width: 70%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    align-items: center; /* Vertically center the images */
+    padding: 20px; /* Add padding to the entire div */
+}
+
+.model-photos img {
+    min-width: 400px; /* Wider images */
+    height: 250px; /* Adjust height to maintain the aspect ratio */
+    margin-right: 30px; /* Increase gap between images */
+    scroll-snap-align: start;
+}
+
+.model-photos::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.model-photos::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 10px;
+}

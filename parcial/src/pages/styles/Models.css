@@ -1,0 +1,17 @@
+.models-page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    
+}
+.models-container{
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    
+}

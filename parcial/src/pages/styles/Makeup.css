@@ -1,0 +1,17 @@
+.makeup-page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+.makeup-container {
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding: 60px;            /* Adds padding around the container */
+    flex-wrap: wrap;          /* Allows the child elements to wrap */
+    gap: 200px;                /* Adds 20px of space between the flex items */
+}

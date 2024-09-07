@@ -1,0 +1,23 @@
+.makeup-card{
+    display: flex;
+    width: 240px;
+    border: 2px solid rgb(52, 50, 50);
+    height: 300px;
+    flex-direction: column;
+    border-radius: 10px;  
+}
+.makeup-card img{
+    height: 65%;
+    width: 100%;
+
+}
+.makeup-card h3{
+    margin-left: 15px;
+    color: gray;
+    font-family: "Tinos", serif;
+}
+.makeup-card h1{
+    margin-left: 15px;
+    color: black;
+    font-family: "Tinos", serif;
+}

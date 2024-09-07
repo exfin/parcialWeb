@@ -1,0 +1,74 @@
+.piePag {
+    background: rgb(30, 30, 31);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.textoFooter {
+    color: rgb(228, 223, 215);
+    font-size: 14px;
+    margin-left: 7%;
+    width: 60%;
+}
+
+.contact-info p {
+    color: rgb(228, 223, 215);
+    font-size: 14px;
+}
+
+.contact-info h2 {
+    color: rgb(228, 223, 215);
+    font-size: 30px;
+    font-family: "Tinos", serif;
+}
+
+.contact-icon {
+    margin-right: 10px;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.contact-icon:hover {
+    color: #ccc;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .textoFooter {
+        font-size: 12px;  /* Smaller font size */
+        width: 80%;       /* Adjust the width for smaller screens */
+    }
+
+    .contact-info h2 {
+        font-size: 24px;  /* Reduce h2 size */
+    }
+
+    .contact-info p {
+        font-size: 12px;  /* Smaller font size for paragraphs */
+    }
+    .textoFooter{
+        width: 52%;
+    }
+}
+
+@media (max-width: 480px) {
+    .textoFooter {
+        font-size: 10px;  /* Even smaller font size for very small screens */
+        width: 90%;       /* Full width on very small screens */
+    }
+
+    .contact-info h2 {
+        font-size: 20px;  /* Reduce h2 size further */
+    }
+
+    .contact-info p {
+        font-size: 10px;  /* Smaller font size for paragraphs */
+    }
+    .textoFooter{
+        width: 52%;
+    }
+}
