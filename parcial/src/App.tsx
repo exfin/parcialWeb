@@ -8,6 +8,7 @@ import Events from './pages/Events'
 import Makeup from './pages/Makeup'
 import Memberships from './pages/Memberships'
 import Models from './pages/Models'
+import Login from './pages/Login'
 import Photos from './pages/Photos'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path='/models' element={<Models></Models>}></Route>
             <Route path='/memberships' element={<Memberships></Memberships>}></Route>
             <Route path='/photos' element={<Photos></Photos>}></Route>
+            <Route path='/login' element={<Login></Login>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

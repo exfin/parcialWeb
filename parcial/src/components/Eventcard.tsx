@@ -12,10 +12,36 @@ class Eventcard extends Component {
                     <h4>Fecha</h4>
                 </div>
                 <div className="event-photos">
-                    <img src="https://via.placeholder.com/400x250" alt="Event Photo 1" />
-                    <img src="https://via.placeholder.com/400x250" alt="Event Photo 2" />
-                    <img src="https://via.placeholder.com/400x250" alt="Event Photo 3" />
-                    <img src="https://via.placeholder.com/400x250" alt="Event Photo 4" />
+                    <div className="div-modelo">
+                        <img className="photo"></img>
+                        <h1>Nombre</h1>
+                    </div>
+                    <div className="div-modelo">
+                        <img className="photo"></img>
+                        <h1>Nombre</h1>
+                    </div> <div className="div-modelo">
+                        <img className="photo"></img>
+                        <h1>Nombre</h1>
+                    </div> <div className="div-modelo">
+                        <img className="photo"></img>
+                        <h1>Nombre</h1>
+                    </div> <div className="div-modelo">
+                        <img className="photo"></img>
+                        <h1>Nombre</h1>
+                    </div> <div className="div-modelo">
+                        <img className="photo"></img>
+                        <h1>Nombre</h1>
+                    </div> <div className="div-modelo">
+                        <img className="photo"></img>
+                        <h1>Nombre</h1>
+                    </div> <div className="div-modelo">
+                        <img className="photo"></img>
+                        <h1>Nombre</h1>
+                    </div> <div className="div-modelo">
+                        <img className="photo"></img>
+                        <h1>Nombre</h1>
+                    </div>
+                    
                 </div>
             </div>
         );

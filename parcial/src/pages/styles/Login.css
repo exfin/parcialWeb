@@ -1,0 +1,100 @@
+.pagina{
+    min-height: 100vh;
+    background-image: url('../../assets/hall.jpg') ; 
+    
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    z-index: -1;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+    background: rgb(0, 0, 0);
+    padding-bottom: 30px;
+    border-radius: 15px;
+    width: 60%;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:9px;
+    width: 100%;
+    margin-top: 30px;
+}
+.text{
+    color: rgb(159, 58, 159);
+    font-size: 48px;
+    font-weight: 700;
+    font-family: "Tinos", serif;
+}
+.separador{
+    width: 61px;
+    height: 6px;
+    background: rgb(159, 58, 159);
+    border-radius: 9px;
+}
+
+.inputs{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+    height: 80px;
+    background: rgb(35, 35, 35);
+    border-radius: 6px;
+}
+.input input{
+    height: 80px;
+    width: 83%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(131, 131, 147);
+    font-size: 19px;
+    font-family: "Tinos", serif;
+}
+
+.link-registro{
+    margin-left: 33px;
+    margin-top: 27px;
+    color: rgb(97, 97, 97);
+    font-size: 14px;
+    
+}
+.contBoton{
+    display: flex;
+    justify-content: center;
+}
+.boton-submit{
+    height: 40px;
+    width: 80%;
+    background: rgb(159, 58, 159);
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    border-radius: 1px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: "Tinos", serif;
+    
+}
+@media (max-width: 480px){
+    .container{
+        width: 100%;
+    }
+}

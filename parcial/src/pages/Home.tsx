@@ -17,7 +17,7 @@ class Home extends Component{
                     <h1>Welcome to the World of Glamour and Style</h1>
 
                         <h2 >
-                            Step into [Designer Name]’s realm of creativity and beauty. From iconic events to stunning models and bold makeup, explore the art that sets new trends.<br />
+                            Step into La Care Cortadas’s realm of creativity and beauty. From iconic events to stunning models and bold makeup, explore the art that sets new trends.<br />
                             Every project is a statement — unique and unforgettable. This is where fashion and power collide.
                         </h2>
 
