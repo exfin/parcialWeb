@@ -16,7 +16,6 @@ This project, developed by **Mateus Lanzoni** and **Juan Miguel Lopez**, is a fu
 
 - **Frontend**: 
   - **React**: Utilized to create the user interface and manage client-side functionality.
-  - **Tailwind CSS**: Applied for styling components across the site, ensuring a responsive and modern design.
   
 - **Backend**: 
   - **NestJS**: Powering the backend with API routes to manage models, business activities, and customer purchases.
@@ -56,9 +55,6 @@ This project, developed by **Mateus Lanzoni** and **Juan Miguel Lopez**, is a fu
 
 This project can be deployed using **Netlify** for the frontend and **Heroku** or **AWS** for the backend services. Be sure to configure your environment variables (such as database connections and API keys) in `.env` files.
 
-## License
-
-This project is licensed under the MIT License.
 
 ## Contact
 
