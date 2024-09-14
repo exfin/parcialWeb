@@ -36,6 +36,9 @@ export const Navbar = () => {
 
                             <NavLink to="/memberships">Memberships</NavLink>
                         </li>
+                        <li>
+                        <NavLink to="/contact">Contact</NavLink>
+                        </li>
                     </ul> 
                 </nav>
     );

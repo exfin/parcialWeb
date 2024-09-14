@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import ContactForm from '../components/contact';
 import './styles/Contact.css'
 
 class Contact extends Component{
@@ -8,11 +9,11 @@ class Contact extends Component{
         return(
 
             <div className="contact-page">
-                <Navbar></Navbar>
+                <Navbar />
                 <div className="contact-container">
-
+                    <ContactForm />
                 </div>
-                <Footer></Footer>
+                <Footer />
             </div>
         );
     }
