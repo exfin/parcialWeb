@@ -8,35 +8,67 @@
     flex-direction: column;
 }
 
+.event-info {
+    position: relative; /* Allows child elements to position absolutely */
+    padding: 70px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 0.5px solid rgb(107, 102, 102);
+    overflow: hidden; /* Ensures background doesn't exceed the container */
+}
+
+.event-info-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Covers the entire event-info area */
+    z-index: 0; /* Places the image behind the gradient and text */
+}
+
+.event-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    z-index: 1; /* Layered above the background image but below the text */
+    opacity: 0.7; /* Optional: adjust transparency for better effect */
+}
+
 .event-info h1 {
     color: black;
     font-family: "Tinos", serif;
+    position: relative;
+    z-index: 2; /* Ensures text stays above the background and gradient */
 }
 
 .event-info h2 {
     color: rgb(65, 64, 64);
     font-family: "Tinos", serif;
+    position: relative;
+    z-index: 2;
 }
 
 .event-info h3 {
     color: rgb(93, 87, 87);
     font-family: "Tinos", serif;
+    position: relative;
+    z-index: 2;
 }
 
 .event-info h4 {
     color: black;
     font-family: "Tinos", serif;
-}
-
-.event-info {
-    padding: 70px;
-    width: 100%;
-    background-image: url('../../assets/hall.jpg'),
-        linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: lighten;
-    height: 50%;
+    position: relative;
+    z-index: 2;
 }
 
 /* Scrolling effect for event-photos */
@@ -56,16 +88,29 @@
     min-width: 450px; /* Set min-width to keep the div from shrinking */
     height: 200px;
     margin-right: 30px;
-    border: 2px solid rgb(52, 50, 50);
+    
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
 }
-.photo{
+
+.div-makeup {
+    min-width: 450px; /* Set min-width to keep the div from shrinking */
+    height: 200px;
+    margin-right: 30px;
+    
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo {
     width: 100%;
     height: 65%;
 }
-.div-modelo h1{
+
+.div-modelo h1,
+.div-makeup h1 {
     color: black;
     font-family: "Tinos", serif;
 }
@@ -82,15 +127,17 @@
 
 /* Smaller images for small screens */
 @media (max-width: 768px) {
-    .div-modelo {
-        min-width: 300px;  /* Reduce width on small screens */
-        height: 200px;     /* Keep height constant */
+    .div-modelo,
+    .div-makeup {
+        min-width: 300px;
+        height: 200px;
     }
 }
 
 @media (max-width: 480px) {
-    .div-modelo {
-        min-width: 200px;  /* Further reduce width for very small screens */
-        height: 150px;     /* Further reduce height */
+    .div-modelo,
+    .div-makeup {
+        min-width: 200px;
+        height: 150px;
     }
 }

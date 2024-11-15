@@ -1,21 +1,35 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import './styles/Modelcard.css';
 
-class Modelcard extends Component {
+interface Photo {
+    _id: string;
+    url: string;
+}
+
+interface ModelcardProps {
+    name: string;
+    description: string;
+    profilePhoto: string;
+    photos: Photo[];
+}
+
+class Modelcard extends Component<ModelcardProps> {
     render() {
+        const { name, description, profilePhoto, photos } = this.props;
+
         return (
             <div className="model-card">
                 <div className="model-info">
-                    <img src="path-to-image.jpg" alt="Model" />
-                    <h1>Nombre</h1>
-                    <h3>Descripción</h3>
+                    {/* Display profilePhoto in model-info */}
+                    <img src={profilePhoto} alt="Profile" />
+                    <h1>{name}</h1>
+                    <h3>{description}</h3>
                 </div>
                 <div className="model-photos">
-                    <img src="https://via.placeholder.com/400x250" alt="Photo 1" />
-                    <img src="https://via.placeholder.com/400x250" alt="Photo 2" />
-                    <img src="https://via.placeholder.com/400x250" alt="Photo 3" />
-                    <img src="https://via.placeholder.com/400x250" alt="Photo 4" />
-                    
+                    {/* Display additional photos in model-photos */}
+                    {photos.map((photo) => (
+                        <img key={photo._id} src={photo.url} alt="Model Photo" />
+                    ))}
                 </div>
             </div>
         );

@@ -1,15 +1,46 @@
-import { Component } from "react";
-import './styles/TopModelCard.css'
+import React, { Component } from "react";
+import './styles/TopModelCard.css';
 
+interface ModelData {
+    _id: string;
+    name: string;
+    description: string;
+    profilePhoto: string;
+}
 
-class TopModelCard extends Component{
-    render(){
-        return(
+interface TopModelCardState {
+    model: ModelData | null;
+}
 
+class TopModelCard extends Component<{}, TopModelCardState> {
+    state: TopModelCardState = {
+        model: null
+    };
+
+    async componentDidMount() {
+        try {
+            const response = await fetch("http://localhost:8080/api/model/gettop"); // Replace with your actual endpoint
+            const model: ModelData = await response.json();
+            this.setState({ model });
+        } catch (error) {
+            console.error("Error fetching random model:", error);
+        }
+    }
+
+    render() {
+        const { model } = this.state;
+
+        return (
             <div className="top-model-card">
-                <img className="top-model-image"></img>
-                <h1 className="top-model-name">Nombre</h1>
-                <h2 className="top-model-booking">Descripción</h2>
+                {model ? (
+                    <>
+                        <img src={model.profilePhoto} alt={model.name} className="top-model-image" />
+                        <h1 className="top-model-name">{model.name}</h1>
+                        <h2 className="top-model-booking">{model.description}</h2>
+                    </>
+                ) : (
+                    <p>Loading model...</p>
+                )}
             </div>
         );
     }
