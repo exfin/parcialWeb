@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './styles/Eventcard.css';
 
-// Define the types for the props
+
 interface Model {
     _id: string;
     name: string;

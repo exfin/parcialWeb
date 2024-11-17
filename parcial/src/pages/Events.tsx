@@ -4,7 +4,7 @@ import { Footer } from "../components/Footer";
 import Eventcard from "../components/Eventcard";
 import './styles/Events.css';
 
-// Define TypeScript interfaces for the event data structure
+
 interface Model {
     _id: string;
     name: string;
@@ -39,7 +39,7 @@ class Events extends Component<{}, EventsState> {
 
     async componentDidMount() {
         try {
-            const response = await fetch("http://localhost:8080/api/event/getall"); // Replace with your actual endpoint
+            const response = await fetch("http://localhost:8080/api/event/getall"); 
             const events: Event[] = await response.json();
             this.setState({ events });
         } catch (error) {

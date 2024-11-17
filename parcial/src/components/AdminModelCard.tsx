@@ -49,7 +49,7 @@ class AdminModelCard extends Component<AdminModelCardProps, AdminModelCardState>
             
             if (response.ok) {
                 alert("Model updated successfully!");
-                window.location.reload(); // Reload the page on success
+                window.location.reload(); 
             } else {
                 alert("Failed to update model");
             }
@@ -71,7 +71,7 @@ class AdminModelCard extends Component<AdminModelCardProps, AdminModelCardState>
 
             if (response.ok) {
                 alert("Model deleted successfully!");
-                window.location.reload(); // Reload the page on success
+                window.location.reload(); 
             } else {
                 alert("Failed to delete model");
             }

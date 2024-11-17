@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import './styles/Photos.css';
 
-// Define the type for a photo
+
 interface Photo {
     _id: string;
     url: string;
@@ -19,10 +19,10 @@ class Photos extends Component<{}, PhotosState> {
         photos: []
     };
 
-    // Fetch all photos from the backend when the component mounts
+    
     async componentDidMount() {
         try {
-            const response = await fetch("http://localhost:8080/api/photo/getall"); // Replace with your actual endpoint
+            const response = await fetch("http://localhost:8080/api/photo/getall"); 
             const photos: Photo[] = await response.json();
             this.setState({ photos });
         } catch (error) {

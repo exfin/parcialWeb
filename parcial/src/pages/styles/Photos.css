@@ -11,8 +11,8 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    padding: 20px;            /* Adds padding around the container */
-    flex-wrap: wrap;          /* Allows the child elements to wrap */
+    padding: 20px;            
+    flex-wrap: wrap;          
     gap: 80px;        
 }
 

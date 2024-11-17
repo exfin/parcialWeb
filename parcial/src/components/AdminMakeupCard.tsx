@@ -30,7 +30,7 @@ class AdminMakeupCard extends Component<AdminMakeupCardProps, AdminMakeupCardSta
         this.setState(prevState => ({
             makeupData: {
                 ...prevState.makeupData,
-                [name]: name === "price" ? parseFloat(value) : value // Handle price as a number
+                [name]: name === "price" ? parseFloat(value) : value 
             }
         }));
     };

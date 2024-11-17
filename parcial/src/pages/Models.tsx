@@ -28,7 +28,7 @@ class Models extends Component<{}, ModelsState> {
 
     async componentDidMount() {
         try {
-            const response = await fetch("http://localhost:8080/api/model/getall&photos"); // Replace with your actual endpoint
+            const response = await fetch("http://localhost:8080/api/model/getall&photos"); 
             const models: Model[] = await response.json();
             this.setState({ models });
         } catch (error) {

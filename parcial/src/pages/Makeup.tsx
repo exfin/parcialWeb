@@ -4,7 +4,7 @@ import { Footer } from "../components/Footer";
 import Makeupcard from "../components/Makeupcard";
 import './styles/Makeup.css';
 
-// Define the types for Makeup
+
 interface MakeupItem {
     _id: string;
     name: string;
@@ -22,10 +22,10 @@ class Makeup extends Component<{}, MakeupState> {
         makeups: []
     };
 
-    // Fetch all makeups from the backend when the component mounts
+    
     async componentDidMount() {
         try {
-            const response = await fetch("http://localhost:8080/api/makeup/getall"); // Replace with your actual endpoint
+            const response = await fetch("http://localhost:8080/api/makeup/getall"); 
             const makeups: MakeupItem[] = await response.json();
             this.setState({ makeups });
         } catch (error) {

@@ -27,8 +27,8 @@
 }
 @media (max-width: 768px) {
     .top-event-card {
-        width: 320px; /* Adjust the card size for small screens */
-        height: 250px; /* Reduce height proportionally */
+        width: 320px; 
+        height: 250px; 
         margin-bottom: 20px;
     }
 }

@@ -36,19 +36,19 @@
     color: #ccc;
 }
 
-/* Media query for smaller screens */
+
 @media (max-width: 768px) {
     .textoFooter {
-        font-size: 12px;  /* Smaller font size */
-        width: 80%;       /* Adjust the width for smaller screens */
+        font-size: 12px;  
+        width: 80%;       
     }
 
     .contact-info h2 {
-        font-size: 24px;  /* Reduce h2 size */
+        font-size: 24px;  
     }
 
     .contact-info p {
-        font-size: 12px;  /* Smaller font size for paragraphs */
+        font-size: 12px;  
     }
     .textoFooter{
         width: 52%;
@@ -57,16 +57,16 @@
 
 @media (max-width: 480px) {
     .textoFooter {
-        font-size: 10px;  /* Even smaller font size for very small screens */
-        width: 90%;       /* Full width on very small screens */
+        font-size: 10px;  
+        width: 90%;       
     }
 
     .contact-info h2 {
-        font-size: 20px;  /* Reduce h2 size further */
+        font-size: 20px;  
     }
 
     .contact-info p {
-        font-size: 10px;  /* Smaller font size for paragraphs */
+        font-size: 10px;  
     }
     .textoFooter{
         width: 52%;

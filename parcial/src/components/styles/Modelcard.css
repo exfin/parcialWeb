@@ -35,20 +35,20 @@
     font-family: "Tinos", serif;
 }
 
-/* Scrolling effect for model-photos */
+
 .model-photos {
     display: flex;
     width: 70%;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    align-items: center; /* Vertically center the images */
-    padding: 20px; /* Add padding to the entire div */
+    align-items: center; 
+    padding: 20px; 
 }
 
 .model-photos img {
-    min-width: 400px; /* Wider images */
-    height: 250px; /* Adjust height to maintain the aspect ratio */
-    margin-right: 30px; /* Increase gap between images */
+    min-width: 400px; 
+    height: 250px; 
+    margin-right: 30px; 
     scroll-snap-align: start;
 }
 

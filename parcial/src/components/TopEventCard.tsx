@@ -19,7 +19,7 @@ class TopEventCard extends Component<{}, TopEventCardState> {
 
     async componentDidMount() {
         try {
-            const response = await fetch("http://localhost:8080/api/event/gettop"); // Replace with your actual endpoint
+            const response = await fetch("http://localhost:8080/api/event/gettop"); 
             const event: EventData = await response.json();
             this.setState({ event });
         } catch (error) {

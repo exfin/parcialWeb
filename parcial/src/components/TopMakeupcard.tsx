@@ -19,7 +19,7 @@ class TopMakeupCard extends Component<{}, TopMakeupCardState> {
 
     async componentDidMount() {
         try {
-            const response = await fetch("http://localhost:8080/api/makeup/gettop"); // Replace with your actual endpoint
+            const response = await fetch("http://localhost:8080/api/makeup/gettop"); 
             const makeup: MakeupData = await response.json();
             this.setState({ makeup });
         } catch (error) {

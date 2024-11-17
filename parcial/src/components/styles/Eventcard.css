@@ -85,7 +85,7 @@
 }
 
 .div-modelo {
-    min-width: 450px; /* Set min-width to keep the div from shrinking */
+    min-width: 450px; 
     height: 200px;
     margin-right: 30px;
     
@@ -95,7 +95,7 @@
 }
 
 .div-makeup {
-    min-width: 450px; /* Set min-width to keep the div from shrinking */
+    min-width: 450px; 
     height: 200px;
     margin-right: 30px;
     
@@ -125,7 +125,7 @@
     border-radius: 10px;
 }
 
-/* Smaller images for small screens */
+
 @media (max-width: 768px) {
     .div-modelo,
     .div-makeup {

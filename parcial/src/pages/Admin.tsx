@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import { Navigate } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import AdminModelCard from "../components/AdminModelCard";
 import AddModelCard from "../components/AddModelCard";
-import AdminMakeupCard from "../components/adminMakeupCard";
+import AdminMakeupCard from "../components/AdminMakeupCard";
 import AddMakeupCard from "../components/AddMakeupCard";
 import './styles/Admin.css';
 
@@ -27,32 +28,76 @@ interface MakeupData {
 interface AdminState {
     models: ModelData[];
     makeups: MakeupData[];
+    isAuthenticated: boolean;
+    loading: boolean;
 }
 
 class Admin extends Component<{}, AdminState> {
     state: AdminState = {
         models: [],
-        makeups: []
+        makeups: [],
+        isAuthenticated: false,
+        loading: true, 
     };
 
     async componentDidMount() {
-        try {
-            // Fetch models
-            const modelResponse = await fetch("http://localhost:8080/api/model/getall"); 
-            const models: ModelData[] = await modelResponse.json();
-            this.setState({ models });
+        const token = localStorage.getItem("token");
 
-            // Fetch makeups
-            const makeupResponse = await fetch("http://localhost:8080/api/makeup/getallComplete");
-            const makeups: MakeupData[] = await makeupResponse.json();
-            this.setState({ makeups });
+        if (!token) {
+            this.setState({ isAuthenticated: false, loading: false });
+            return;
+        }
+
+        try {
+            
+            const response = await fetch("http://localhost:8080/auth/validate", {
+                method: "GET",
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+
+            if (response.ok) {
+                this.setState({ isAuthenticated: true, loading: false });
+
+                
+                const modelResponse = await fetch("http://localhost:8080/api/model/getall", {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
+                const models: ModelData[] = await modelResponse.json();
+                this.setState({ models });
+
+                
+                const makeupResponse = await fetch("http://localhost:8080/api/makeup/getallComplete", {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                });
+                const makeups: MakeupData[] = await makeupResponse.json();
+                this.setState({ makeups });
+            } else {
+                this.setState({ isAuthenticated: false, loading: false });
+            }
         } catch (error) {
-            console.error("Error fetching data:", error);
+            console.error("Error verifying token or fetching data:", error);
+            this.setState({ isAuthenticated: false, loading: false });
         }
     }
 
     render() {
-        const { models, makeups } = this.state;
+        const { models, makeups, isAuthenticated, loading } = this.state;
+
+        if (loading) {
+            
+            return <div>Loading...</div>;
+        }
+
+        if (!isAuthenticated) {
+            
+            return <Navigate to="/login" />;
+        }
 
         return (
             <div className="admin-page">
