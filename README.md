@@ -34,9 +34,14 @@ This project, developed by **Juan Miguel Lopez** and **Mateus Lanzoni**, is a fu
       cd parcial
       npm install
       ```
-    
 
-3. **Start the Application**:
+3. **Specify the api endpoint in a .env file in /parcial**:
+    
+      ```bash
+      VITE_API_URL
+      ```
+    
+4. **Start the Application**:
    
       ```bash
       npm run dev
@@ -52,5 +57,5 @@ This project can be deployed using **Netlify** for the frontend and **Render** o
 
 For any inquiries, reach out to the developers:
 - Mateus Lanzoni: [GitHub](https://github.com/mateuslanzoni)
-- Juan Miguel Lopez: [GitHub](https://github.com/juan-miguel-lopez)
+- Juan Miguel Lopez: [GitHub](https://github.com/exfin)
 
