@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import  { Component } from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import Makeupcard from "../components/Makeupcard";
