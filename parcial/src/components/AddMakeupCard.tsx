@@ -40,7 +40,7 @@ class AddMakeupCard extends Component<{}, AddMakeupCardState> {
     handleSubmit = async () => {
         const { makeupData } = this.state;
         try {
-            const response = await fetch("http://localhost:8080/api/makeup/add", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/makeup/add`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

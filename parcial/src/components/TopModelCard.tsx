@@ -19,7 +19,7 @@ class TopModelCard extends Component<{}, TopModelCardState> {
 
     async componentDidMount() {
         try {
-            const response = await fetch("http://localhost:8080/api/model/gettop"); 
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/model/gettop`); 
             const model: ModelData = await response.json();
             this.setState({ model });
         } catch (error) {

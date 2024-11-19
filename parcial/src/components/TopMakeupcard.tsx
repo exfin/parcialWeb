@@ -19,7 +19,7 @@ class TopMakeupCard extends Component<{}, TopMakeupCardState> {
 
     async componentDidMount() {
         try {
-            const response = await fetch("http://localhost:8080/api/makeup/gettop"); 
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/makeup/gettop`); 
             const makeup: MakeupData = await response.json();
             this.setState({ makeup });
         } catch (error) {

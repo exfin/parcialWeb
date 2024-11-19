@@ -19,7 +19,8 @@ class TopEventCard extends Component<{}, TopEventCardState> {
 
     async componentDidMount() {
         try {
-            const response = await fetch("http://localhost:8080/api/event/gettop"); 
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/event/gettop`);
+
             const event: EventData = await response.json();
             this.setState({ event });
         } catch (error) {

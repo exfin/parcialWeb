@@ -25,7 +25,7 @@ class Makeup extends Component<{}, MakeupState> {
     
     async componentDidMount() {
         try {
-            const response = await fetch("http://localhost:8080/api/makeup/getall"); 
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/makeup/getall`); 
             const makeups: MakeupItem[] = await response.json();
             this.setState({ makeups });
         } catch (error) {

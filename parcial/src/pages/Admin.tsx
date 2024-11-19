@@ -50,7 +50,7 @@ class Admin extends Component<{}, AdminState> {
 
         try {
             
-            const response = await fetch("http://localhost:8080/auth/validate", {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/validate`, {
                 method: "GET",
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -61,7 +61,7 @@ class Admin extends Component<{}, AdminState> {
                 this.setState({ isAuthenticated: true, loading: false });
 
                 
-                const modelResponse = await fetch("http://localhost:8080/api/model/getall", {
+                const modelResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/model/getall`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -70,7 +70,7 @@ class Admin extends Component<{}, AdminState> {
                 this.setState({ models });
 
                 
-                const makeupResponse = await fetch("http://localhost:8080/api/makeup/getallComplete", {
+                const makeupResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/makeup/getallComplete`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

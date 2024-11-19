@@ -39,7 +39,7 @@ class AdminModelCard extends Component<AdminModelCardProps, AdminModelCardState>
     handleUpdate = async () => {
         const { modelData } = this.state;
         try {
-            const response = await fetch(`http://localhost:8080/api/model/edit/${modelData._id}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/model/edit/${modelData._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -62,7 +62,7 @@ class AdminModelCard extends Component<AdminModelCardProps, AdminModelCardState>
     handleDelete = async () => {
         const { modelData } = this.state;
         try {
-            const response = await fetch(`http://localhost:8080/api/model/delete/${modelData._id}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/model/delete/${modelData._id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

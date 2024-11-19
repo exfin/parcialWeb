@@ -22,7 +22,7 @@ class Photos extends Component<{}, PhotosState> {
     
     async componentDidMount() {
         try {
-            const response = await fetch("http://localhost:8080/api/photo/getall"); 
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/photo/getall`); 
             const photos: Photo[] = await response.json();
             this.setState({ photos });
         } catch (error) {

@@ -39,7 +39,7 @@ class Events extends Component<{}, EventsState> {
 
     async componentDidMount() {
         try {
-            const response = await fetch("http://localhost:8080/api/event/getall"); 
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/event/getall`); 
             const events: Event[] = await response.json();
             this.setState({ events });
         } catch (error) {

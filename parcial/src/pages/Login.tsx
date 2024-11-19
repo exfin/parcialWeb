@@ -24,7 +24,7 @@ class Login extends Component<{}, LoginState> {
     if (token) {
       try {
         
-        const response = await fetch("http://localhost:8080/auth/validate", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/validate`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -56,7 +56,7 @@ class Login extends Component<{}, LoginState> {
     const { username, password } = this.state;
 
     try {
-      const response = await fetch("http://localhost:8080/api/admin/login", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

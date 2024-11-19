@@ -38,7 +38,7 @@ class AdminMakeupCard extends Component<AdminMakeupCardProps, AdminMakeupCardSta
     handleUpdate = async () => {
         const { makeupData } = this.state;
         try {
-            const response = await fetch(`http://localhost:8080/api/makeup/edit/${makeupData._id}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/makeup/edit/${makeupData._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ class AdminMakeupCard extends Component<AdminMakeupCardProps, AdminMakeupCardSta
     handleDelete = async () => {
         const { makeupData } = this.state;
         try {
-            const response = await fetch(`http://localhost:8080/api/makeup/delete/${makeupData._id}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/makeup/delete/${makeupData._id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
