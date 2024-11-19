@@ -126,11 +126,7 @@ class Login extends Component<{}, LoginState> {
               </button>
             </div>
           </form>
-          <div className="link-registro">
-            <p>
-              Don’t have an account? <Link to="/registro">Registry</Link>
-            </p>
-          </div>
+          
         </div>
       </div>
     );
