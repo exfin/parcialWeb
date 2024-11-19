@@ -1,4 +1,4 @@
-import './styles/contact.css';
+import './styles/Contact.css';
 
 import linkedinIcon from '../assets/circle-linkedin.png';
 import xIcon from '../assets/xIcon.png';
