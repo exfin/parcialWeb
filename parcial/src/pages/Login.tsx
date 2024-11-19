@@ -1,6 +1,6 @@
 import  { Component, ChangeEvent, FormEvent } from "react";
 import { Link, Navigate } from "react-router-dom";
-import './styles/login.css';
+import './styles/Login.css';
 
 interface LoginState {
   username: string;
